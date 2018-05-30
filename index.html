@@ -11,23 +11,23 @@
 </head>
 <body>
 
-<div class="mx-auto" style="width: 50%; text-align: center">
+<div class="mx-auto" style="width: 50%; text-align: center; margin: 100px">
 
-    <h1 data-bind="text: name"></h1>
-    <h3 data-bind="text: age"></h3>
+    <h1 data-bind="text: currentCat().name"></h1>
+    <h3 data-bind="text: currentCat().age"></h3>
     <figure>
-        <img src="" data-bind="click: incrementCounter, attr: {src: imgSrc}">
-        <figcaption data-bind="text: clickCount"></figcaption>
+        <img src="" data-bind="click: incrementCounter, attr: {src: currentCat().imgSrc}">
+        <figcaption><strong data-bind="text: currentCat().clickCount"></strong></figcaption>
     </figure>
 
-    <ul data-bind="foreach: nicknames">
+    <ul data-bind="foreach: currentCat().nicknames">
         <li>
-            <span data-bind="text: name"></span>
-             <a href="#" data-bind="click: $parent. removeName">Remove</a>
+            <a href="#" data-bind="click: $parent.currentCat().changeName, text: name"></a>
+             <a href="#" data-bind="click: $parent.currentCat().removeName">Remove</a>
         </li>
     </ul>
 
-    <button data-bind="click: addNickName">Add</button>
+    <button data-bind="click: currentCat().addNickName">Add</button>
 </div>
 
 <script type="text/javascript"
