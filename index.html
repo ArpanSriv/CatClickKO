@@ -19,6 +19,15 @@
         <img src="" data-bind="click: incrementCounter, attr: {src: imgSrc}">
         <figcaption data-bind="text: clickCount"></figcaption>
     </figure>
+
+    <ul data-bind="foreach: nicknames">
+        <li>
+            <span data-bind="text: name"></span>
+             <a href="#" data-bind="click: $parent. removeName">Remove</a>
+        </li>
+    </ul>
+
+    <button data-bind="click: addNickName">Add</button>
 </div>
 
 <script type="text/javascript"
