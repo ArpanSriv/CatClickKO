@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Cat Clicker</title>
+    <link rel="stylesheet"
+          href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet"
+          href="https://code.getmdl.io/1.3.0/material.indigo-pink.min.css">
+    <script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
+</head>
+<body>
+
+<div class="mx-auto" style="width: 50%; text-align: center">
+
+    <h1 data-bind="text: name"></h1>
+    <h3 data-bind="text: age"></h3>
+    <figure>
+        <img src="" data-bind="click: incrementCounter, attr: {src: imgSrc}">
+        <figcaption data-bind="text: clickCount"></figcaption>
+    </figure>
+</div>
+
+<script type="text/javascript"
+        src="https://cdnjs.cloudflare.com/ajax/libs/knockout/3.4.2/knockout-min.js"></script>
+<script type="text/javascript" src="app.js"></script>
+</body>
+</html>
